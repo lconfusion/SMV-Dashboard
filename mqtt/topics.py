@@ -9,7 +9,9 @@ topics_list = {
     },
         "/Bear_1/Motor_State": {
         "name": "bear1.motor_state",
-        "model": Motor_StateData
+        "model": Motor_StateData,
+        "max": 0,
+        "min": 0
         #io
     },
         "/Bear_1/Cruise": {
@@ -19,13 +21,15 @@ topics_list = {
     },
         "/Bear_1/M_Error_Status": {
         "name": "bear1.m_error_status",
-        "model": M_Error_StatusData
+        "model": M_Error_StatusData,
+        "max": 0,
+        "min": 0
         #error 1, check, io
     },
         "/Bear_1/Throttle": {
         "name": "bear1.throttle",
         "model": ThrottleData,
-        "max": 100,
+        "max": 1028,
         "min": 0
         #error above 1028: check teensy output range, ignore
     },
@@ -55,7 +59,9 @@ topics_list = {
     },
     "/Bear_2/M_Error_Status": {
         "name": "bear2.m_error_status",
-        "model": M_Error_StatusData
+        "model": M_Error_StatusData,
+        "max": 0,
+        "min": 0
         #error 1, check
 
     },
@@ -73,40 +79,44 @@ topics_list = {
         "model": Meter_CountData
     },
     #power_control
-    "/Power_Control/Current": {
-        "name": "power_control.current",
-        "model": CurrentData
-        # >120 A check back
-    },
-    "/Power_Control/Voltage": {
-        "name": "power_control.voltage",
-        "model": VoltageData
-        # >55 V
-    },
-    "/Power_Control/Power": {
-        "name": "power_control.power",
-        "model": PowerData
-    },
-    "/Power_Control/Energy": {
-        "name": "power_control.energy",
-        "model": EnergyData
-    },
-    "/Power_Control/T1": {
-        "name": "power_control.t1",
-        "model": T1Data
-    },
-    "/Power_Control/T2": {
-        "name": "power_control.t2",
-        "model": T2Data
-    },
-    "/Power_Control/T3": {
-        "name": "power_control.t3",
-        "model": T3Data
-    },
-    "/Power_Control/P_Error_Status": {
-        "name": "power_control.p_error_status",
-        "model": P_Error_StatusData
-    },
+    # "/Power_Control/Current": {
+    #     "name": "power_control.current",
+    #     "model": CurrentData,
+    #     "max": 120,
+    #     "min": 0
+    #     # >120 A check back
+    # },
+    # "/Power_Control/Voltage": {
+    #     "name": "power_control.voltage",
+    #     "model": VoltageData,
+    #     "max": 55,
+    #     "min": 0
+    #     # >55 V
+    # },
+    # "/Power_Control/Power": {
+    #     "name": "power_control.power",
+    #     "model": PowerData
+    # },
+    # "/Power_Control/Energy": {
+    #     "name": "power_control.energy",
+    #     "model": EnergyData
+    # },
+    # "/Power_Control/T1": {
+    #     "name": "power_control.t1",
+    #     "model": T1Data
+    # },
+    # "/Power_Control/T2": {
+    #     "name": "power_control.t2",
+    #     "model": T2Data
+    # },
+    # "/Power_Control/T3": {
+    #     "name": "power_control.t3",
+    #     "model": T3Data
+    # },
+    # "/Power_Control/P_Error_Status": {
+    #     "name": "power_control.p_error_status",
+    #     "model": P_Error_StatusData
+    # },
     #Steering
     "/Steering_Wheel/Switch_Encoding": {
         "name": "steering_wheel.switch_encoding",
@@ -115,7 +125,9 @@ topics_list = {
     },
     "/Steering_Wheel/S_Error_Status": {
         "name": "steering_wheel.s_error_status",
-        "model": S_Error_StatusData
+        "model": S_Error_StatusData,
+        "max": 0,
+        "min": 0
         #io
     },
     #DAQMessage
